@@ -1,0 +1,62 @@
+@import '../gui/variables';
+
+.product {
+    font-family: $font-base;
+    width: 60%;
+    background: $color-white;
+    margin: 0 0 20px;
+    border-radius: 3px;
+    border: 1px solid $color-secondary;
+    &__head {
+        width: 60%;
+        font-weight: $font-weight-regular;
+        color: $color-primary;
+        margin: 4px;
+        h2 {
+            font-size: $font-size-regular;
+            padding: 12px 0 12px 12px;
+            margin: 0;
+        }
+    }
+    &__content {
+        padding: 0;
+        border: 1px solid $color-secondary;
+        font-size: $font-size-small;
+        color: $color-tertiary;
+        font-weight: $font-weight-bold;
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            list-style: none;
+            position: relative;
+            border-bottom: 1px solid $color-secondary;
+            padding: 7px 15px;
+            display: flex;
+        }
+    }
+    &__info {
+        flex: 1;
+        &--small {
+            color: $color-primary;
+            font-weight: 500;
+        }
+    }
+    &__price {
+        text-align: right;
+    }
+    &__actions {
+        margin-right: 15px;
+    }
+    &__count {
+        width: 26px;
+        height: 17px;
+        text-align: center;
+        margin-top: 2px;
+        border: 1px solid $color-secondary;
+        border-radius: 2px;
+        font-size: $font-size-small;
+        margin-right: 4px;
+    }
+}
