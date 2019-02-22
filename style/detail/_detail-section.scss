@@ -1,0 +1,52 @@
+@import '../gui/variables';
+
+.detail-box {
+    font-family: $font-base;
+    border: 1px solid $color-secondary;
+    margin: 0 0 15px;
+    padding: 12px 0 12px 12px;
+    height: 117px;
+    box-shadow: 1px 1px 0 $color-secondary;
+    display: flex;
+    &__rating {
+        margin-right: 10px;
+        flex: 1;
+    }
+    &__point {
+        float: left;
+        width: 49px;
+        height: 50px;
+        border-radius: 3px;
+        margin: 0 5px 0 0;
+        padding: 15px 0 0;
+        background-color: #a5c530;
+        color: $color-white;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-middle;
+        text-align: center;
+        span {
+            font-size: $font-size-large;
+            margin-top: 5px;
+        }
+    }
+    &__head {
+        color: #949494;
+        h2 {
+            font-size: $font-size-middle;
+        }
+    }
+    &__short-info {
+        display: flex;
+        width: 50%;
+        div {
+            width: 25%;
+            h2 {
+                color: #949494;
+                font-size: $font-size-middle;
+            }
+        }
+    }
+    &__image {
+        margin-right: 15px;
+    }
+}

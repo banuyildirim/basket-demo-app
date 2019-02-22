@@ -23,7 +23,6 @@
 
 .product {
   font-family: Verdana, Geneva, sans-serif;
-  width: 60%;
   background: #FFFFFF;
   margin: 0 0 20px;
   border-radius: 3px;
@@ -94,5 +93,76 @@
   border-radius: 2px;
   font-size: 11px;
   margin-right: 4px;
+}
+
+.detail-box {
+  font-family: Verdana, Geneva, sans-serif;
+  border: 1px solid #F3F3F3;
+  margin: 0 0 15px;
+  padding: 12px 0 12px 12px;
+  height: 117px;
+  -webkit-box-shadow: 1px 1px 0 #F3F3F3;
+          box-shadow: 1px 1px 0 #F3F3F3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.detail-box__rating {
+  margin-right: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.detail-box__point {
+  float: left;
+  width: 49px;
+  height: 50px;
+  border-radius: 3px;
+  margin: 0 5px 0 0;
+  padding: 15px 0 0;
+  background-color: #a5c530;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+}
+
+.detail-box__point span {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.detail-box__head {
+  color: #949494;
+}
+
+.detail-box__head h2 {
+  font-size: 12px;
+}
+
+.detail-box__short-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+}
+
+.detail-box__short-info div {
+  width: 25%;
+}
+
+.detail-box__short-info div h2 {
+  color: #949494;
+  font-size: 12px;
+}
+
+.detail-box__image {
+  margin-right: 15px;
+}
+
+section .container {
+  width: 65%;
 }
 /*# sourceMappingURL=main.css.map */
