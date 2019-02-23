@@ -14,19 +14,19 @@
     }
     &__point {
         float: left;
-        width: 49px;
+        width: 30%;
         height: 50px;
         border-radius: 3px;
         margin: 0 5px 0 0;
-        padding: 15px 0 0;
+        padding: 10px 0 0;
         background-color: #a5c530;
         color: $color-white;
-        font-weight: $font-weight-bold;
+        font-weight: $font-weight-regular;
         font-size: $font-size-middle;
         text-align: center;
         span {
-            font-size: $font-size-large;
-            margin-top: 5px;
+            font-size: 22px;
+            margin-top: 10px;
         }
     }
     &__head {
@@ -39,10 +39,14 @@
         display: flex;
         width: 50%;
         div {
-            width: 25%;
+            width: 30%;
             h2 {
                 color: #949494;
                 font-size: $font-size-middle;
+            }
+            span {
+                font-size: $font-size-small;
+                font-weight: $font-weight-regular;
             }
         }
     }

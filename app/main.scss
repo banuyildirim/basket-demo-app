@@ -4,21 +4,27 @@
 @import '../style/banner/banner';
 @import '../style/product/product';
 @import '../style/detail/detail-section';
-
+@import '../style/basket/basket';
 
 body {
+    font-family: $font-base;
     margin: 0;
 }
 
 .container {
-    margin: 0 60px 0;
+    margin: 0 150px 0;
 }
 
 .section {
     margin: 25px 0 0;
     &--right {
         float: right;
-        width: 65%;
+        width: 72%;
+    }
+    &--left {
+        float: left;
+        width: 25%;
+        margin-right: 5px;
     }
 }
 
