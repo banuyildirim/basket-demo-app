@@ -163,8 +163,8 @@ header .content .logo {
   font-family: Verdana, Geneva, sans-serif;
   border: 1px solid #F3F3F3;
   margin: 0 0 15px;
-  padding: 12px 0 12px 12px;
-  height: 117px;
+  padding: 5px 0 5px 10px;
+  height: auto;
   -webkit-box-shadow: 1px 1px 0 #F3F3F3;
           box-shadow: 1px 1px 0 #F3F3F3;
   display: -webkit-box;
@@ -287,5 +287,9 @@ body {
   float: left;
   width: 25%;
   margin-right: 5px;
+}
+
+.tabContent .hide {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

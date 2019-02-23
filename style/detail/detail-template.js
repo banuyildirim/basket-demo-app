@@ -30,7 +30,3 @@ const htmlTemplate = `<article>
     </article>`;
 
 $obj.detailTemplate.innerHTML = htmlTemplate;
-
-if($obj.detailBoxPoint.innerHTML < 8){
-    $obj.detailBoxPoint.addClass('detail-box__point--yellow');
-}
