@@ -1,10 +1,23 @@
 
 @import '../style/gui/elements';
+@import '../style/gui/header';
+@import '../style/banner/banner';
 @import '../style/product/product';
 @import '../style/detail/detail-section';
 
-section {
-    .container {
+
+body {
+    margin: 0;
+}
+
+.container {
+    margin: 0 60px 0;
+}
+
+.section {
+    margin: 25px 0 0;
+    &--right {
+        float: right;
         width: 65%;
     }
 }

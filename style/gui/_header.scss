@@ -1,0 +1,37 @@
+@import 'variables';
+
+header {
+    .top {
+        &--gray {
+            height: 73px;
+            background-color: $color-secondary;
+        }
+        &--right {
+            float: right;
+        }
+        &--margin {
+            margin: 12px 0 0;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    .content {
+        height: 80px;
+        position: relative;
+        &--red {
+            background: #ab0012;
+        }
+        .logo {
+            width: 157px;
+            height: 155px;
+            background: url('../../images/logo.png') no-repeat 50%;
+            top: -60px;
+            left: 48px;
+            opacity: 1;
+            z-index: 1;
+            border-radius: 50%;
+            position: relative;
+        }
+    }
+}

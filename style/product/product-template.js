@@ -1,8 +1,10 @@
 
 import data from '../../json/menu.json';
 
-const objects = data.d.ResultSet;
-let domTemplate = document.getElementById('js-product-template');
+const $obj = {
+    data: data.d.ResultSet,
+    productTemplate: document.getElementById('js-product-template'),
+}
 
 const htmlTemplate = (values) => `<article>
     ${ values.map(value => 
@@ -12,7 +14,7 @@ const htmlTemplate = (values) => `<article>
         </div></div>`
     ).join(' ') }</article>`;
 
-const template = htmlTemplate(objects);
-domTemplate.innerHTML = template;
+const template = htmlTemplate($obj.data);
+$obj.productTemplate.innerHTML = template;
 
 

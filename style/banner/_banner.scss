@@ -1,0 +1,24 @@
+@import '../gui/variables';
+
+.banner {
+    min-height: 100px;
+    position: relative;
+    overflow: hidden;
+    font-family: $font-secondary;
+    color: $color-primary;
+    h2 {
+        font-weight: $font-weight-regular;
+    }
+    img {
+        position: absolute;
+        right: 0;
+        top: -40px;
+    }
+    &__content {
+        position: relative;
+        margin: 15px 0 0;
+    }
+    &--right {
+        float: left;
+    }
+}

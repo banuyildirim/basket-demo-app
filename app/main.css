@@ -21,6 +21,71 @@
   background-color: #328112;
 }
 
+header .top--gray {
+  height: 73px;
+  background-color: #F3F3F3;
+}
+
+header .top--right {
+  float: right;
+}
+
+header .top--margin {
+  margin: 12px 0 0;
+}
+
+header .top a {
+  text-decoration: none;
+}
+
+header .content {
+  height: 80px;
+  position: relative;
+}
+
+header .content--red {
+  background: #ab0012;
+}
+
+header .content .logo {
+  width: 157px;
+  height: 155px;
+  background: url("../../images/logo.png") no-repeat 50%;
+  top: -60px;
+  left: 48px;
+  opacity: 1;
+  z-index: 1;
+  border-radius: 50%;
+  position: relative;
+}
+
+.banner {
+  min-height: 100px;
+  position: relative;
+  overflow: hidden;
+  font-family: Open Sans, sans-serif;
+  color: #333333;
+}
+
+.banner h2 {
+  font-weight: 600;
+}
+
+.banner img {
+  position: absolute;
+  right: 0;
+  top: -40px;
+}
+
+.banner__content {
+  position: relative;
+  margin: 15px 0 0;
+}
+
+.banner--right {
+  float: left;
+}
+
 .product {
   font-family: Verdana, Geneva, sans-serif;
   background: #FFFFFF;
@@ -162,7 +227,20 @@
   margin-right: 15px;
 }
 
-section .container {
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 0 60px 0;
+}
+
+.section {
+  margin: 25px 0 0;
+}
+
+.section--right {
+  float: right;
   width: 65%;
 }
 /*# sourceMappingURL=main.css.map */
