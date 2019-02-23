@@ -1,15 +1,20 @@
 
-let xx = document.getElementsByClassName('js-add-product');
 import data from '../../json/menu.json';
 const states = {
     result: data.d.ResultSet
 }
+let btnAddBasket = document.getElementsByClassName('js-add-product');
+const productsArray = [];
+states.result.map((value) => {
+    productsArray.push(value.Products);
+});
+console.log(productsArray);
 
-let items = document.getElementsByClassName('items');
-Object.entries(xx).map(( object ) => {
+Object.entries(btnAddBasket).map(( object ) => {
     object[1].addEventListener("click", function() {
-        if(this.dataset.id ==! states.result[0].Products[0].ProductId){
-            console.log('cbjbcd');
-        }
+        const res2 = productsArray.filter((item) => {
+            return item.ProductId === this.dataset.id;
+        });
+        console.log(res2);
     });
 });
