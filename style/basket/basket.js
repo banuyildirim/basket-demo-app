@@ -4,7 +4,9 @@ const states = {
     result: data.d.ResultSet
 }
 const $obj = {
-    btnAddBasket: document.getElementsByClassName('js-add-product')
+    btnAddBasket: document.getElementsByClassName('js-add-product'),
+    basketSection: document.getElementsByClassName('basket-box__items')[0],
+    basketNote: document.getElementById('basket-box__note')
 }
 
 const productsArray = new Array();
@@ -25,20 +27,17 @@ function filterViaCategory(arr, category) {
     });
 }
 
-const tableTemplate = (values) => `<table border='1' width='100%'><tr>
-    ${ values.map(value => 
-    `<td align='center'>${value.DisplayName} </td>`
-    ).join(' ') }</tr></table>`;
-
-document.getElementsByClassName('items').innerText = "";
-
+$obj.basketSection.innerHTML = '';
+$obj.basketNote.style.display = 'block';
 Object.entries($obj.btnAddBasket).map(( object ) => {
     object[1].addEventListener("click", function() {
         basketArray.push((filterViaCategory(productsArray, this.dataset.id)));
-        console.log(basketArray);
-        setTimeout(() => {
-            document.getElementsByClassName('items').innerText = tableTemplate(basketArray);
-        }, 3000);
+        let templater = "<div>";
+        for (let i = 0; i < basketArray.length; i++){
+            templater += `<table><tr>
+            <td>${basketArray[i][0].DisplayName}</td><td><input type='text' class='product__count' value='1' /></td><td>${basketArray[i][0].ListPrice}</td>`; } templater += "</tr></table>";
+        $obj.basketSection.innerHTML = templater;
+        $obj.basketNote.style.display = 'none';
     });
 });
 
