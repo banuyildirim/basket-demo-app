@@ -5,7 +5,7 @@ const states = {
 }
 const $obj = {
     btnAddBasket: document.getElementsByClassName('js-add-product'),
-    basketSection: document.getElementsByClassName('basket-box__items')[0],
+    basketSection: document.getElementsByClassName('basket-box-list')[0],
     basketNote: document.getElementById('basket-box__note')
 }
 
@@ -27,17 +27,26 @@ function filterViaCategory(arr, category) {
     });
 }
 
+function getSum(total, num) {
+    return total + num;
+}
+
+let price = [];
 $obj.basketSection.innerHTML = '';
 $obj.basketNote.style.display = 'block';
 Object.entries($obj.btnAddBasket).map(( object ) => {
     object[1].addEventListener("click", function() {
-        basketArray.push((filterViaCategory(productsArray, this.dataset.id)));
-        let templater = "<div>";
+        basketArray.push((filterViaCategory(productsArray, this.dataset.id)[0]));
+        let templater = "";
         for (let i = 0; i < basketArray.length; i++){
-            templater += `<table><tr>
-            <td>${basketArray[i][0].DisplayName}</td><td><input type='text' class='product__count' value='1' /></td><td>${basketArray[i][0].ListPrice}</td>`; } templater += "</tr></table>";
+            price.push(parseFloat((basketArray[i].ListPrice).replace(',','.')));
+            templater += `<tr>
+            <td class="basket-box-list__name">${basketArray[i].DisplayName}</td><td><input type='text' class='product__count' value='1' /></td><td class="basket-box-list__price">${basketArray[i].ListPrice} TL</td>`;} templater += "</tr><tr><td>Toplam</td><td></td><td id='js-total-value' class='basket-box-list__total'></td></tr>";
         $obj.basketSection.innerHTML = templater;
         $obj.basketNote.style.display = 'none';
+        console.log(price);
+        document.getElementById('js-total-value').innerHTML = price.reduce(getSum) + " TL";
+        price = [];
     });
 });
 

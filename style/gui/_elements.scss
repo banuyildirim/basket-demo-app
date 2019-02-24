@@ -20,3 +20,22 @@
         background-color: rgb(50, 129, 18);
     }
 }
+
+.btn-secondary {
+    background-color: #FEBA36;
+    color: $color-primary;
+    border: 1px solid #FEB11D;
+    border-radius: 3px;
+    padding: 8px 17px;
+    text-align: center;
+    white-space: nowrap;
+    outline: none;
+    text-decoration: none;
+    font-family: $font-secondary;
+    font-size: $font-size-middle;
+    cursor: pointer;
+    box-shadow: 0 2px 0 rgba(0,0,0,.15), inset 0 1px 0 hsla(0,0%,100%,.19);
+    &:hover, &:active, &:focus {
+        background-color: rgb(252, 177, 27);
+    }
+}
