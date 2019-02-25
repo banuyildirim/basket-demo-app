@@ -3,7 +3,7 @@
 module.exports = {
     entry: './app/main.js',
     output: {
-        filename: 'dist/bundle.js'
+        filename: 'dist/dist/bundle.js'
     },
     module: {
         rules : [
@@ -13,14 +13,6 @@ module.exports = {
               use: {
                 loader: 'babel-loader'
             }
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    "style-loader", // creates style nodes from JS strings
-                    "css-loader", // translates CSS into CommonJS
-                    "sass-loader" // compiles Sass to CSS, using Node Sass by default
-                ]
             }
         ]
     },
